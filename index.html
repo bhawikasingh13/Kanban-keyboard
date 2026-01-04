@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftBoard - Vanilla Kanban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="board">
+        <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>To Do</h3>
+            <div class="items-container">
+                <div class="task" draggable="true" ondragstart="drag(event)" id="task-1">
+                    Refactor Python Script
+                </div>
+                <div class="task" draggable="true" ondragstart="drag(event)" id="task-2">
+                    Update GitHub README
+                </div>
+            </div>
+        </div>
+
+        <div class="column" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>In Progress</h3>
+            <div class="items-container"></div>
+        </div>
+
+        <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Done</h3>
+            <div class="items-container"></div>
+        </div>
+    </div>
+    <script src="kanban.js"></script>
+</body>
+
+</html>
